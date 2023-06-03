@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap');
+
+:root {
+  /* Colors */
+  /* Primary */
+  --blue: hsl(223, 87%, 63%);
+  /* Secondary */
+  --pale-blue: hsl(223, 100%, 88%);
+  --light-red: hsl(354, 100%, 66%);
+  --light-blue: hsl(223, 86%, 73%);
+  /* Neutral */
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: hsl(209, 33%, 12%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 1.25rem;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main .container {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .contentUp {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+main .container .contentUp img {
+  width: 4rem;
+}
+
+main .container .contentUp h1 {
+  color: var(--gray);
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+main .container .contentUp h1 span {
+  color: var(--very-dark-blue);
+  font-weight: 700;
+}
+
+main .container .contentUp h2 {
+  color: var(--black);
+  font-weight: 300;
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+main .container .contentUp .inputAndButton {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: .3rem;
+}
+
+main .container .contentUp .inputAndButton .input input {
+  width: 100%;
+  padding: .7rem 1.6rem;
+  border: .063rem solid var(--pale-blue);
+  border-radius: 2rem;
+  font-size: .75rem;
+  outline: none;
+}
+
+main .container .contentUp .inputAndButton .input input.error {
+  border-color: var(--light-red);
+}
+
+main .container .contentUp .inputAndButton .input input::placeholder {
+  color: var(--pale-blue);
+  letter-spacing: .05rem;
+  opacity: .9;
+}
+
+main .container .contentUp .inputAndButton .input input.error::placeholder {
+  color: (var(--very-dark-blue));
+}
+
+main .container .contentUp .inputAndButton .input .infoError {
+  color: var(--light-red);
+  text-align: center;
+  font-size: .7rem;
+  font-weight: 600;
+  font-style: italic;
+  opacity: .7;
+  display: none;
+  margin-top: .3rem;
+}
+
+main .container .contentUp .inputAndButton button {
+  width: 100%;
+  padding: .7rem 1.6rem;
+  border-radius: 2rem;
+  font-size: .75rem;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-weight: 300;
+  letter-spacing: .06rem;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: .5rem;
+}
+
+main .container .contentUp .inputAndButton button:hover {
+  background-color: var(--light-blue);
+  box-shadow: 0 0 .625rem .125rem hsla(223, 87%, 63%, 0.4);
+}
+
+main .container .contentMiddle {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+main .container .contentMiddle img {
+  width: 100%;
+}
+
+main .container .contentFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+main .container .contentFooter .socials {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main .container .contentFooter .socials a {
+  display: flex;
+  padding: .5rem;
+  border: .063rem solid var(--pale-blue);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+main .container .contentFooter .socials img {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+main .container .contentFooter .socials a:hover {
+  background-color: var(--blue);
+}
+
+main .container .contentFooter .socials img:hover {
+  filter: brightness(0) invert(100%);
+}
+
+main .container .contentFooter .textFooter {
+  color: var(--gray);
+  font-size: .7rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: .8rem;
+  font-weight: 300;
+  color: var(--gray);
+  padding-bottom: .3rem;
+}
+
+footer .attribution a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+@media (min-width: 900px) {
+  main .container {
+    padding: 0;
+    width: 31.25rem;
+  }
+
+  main .container .contentUp {
+    padding: 2rem 0;
+    gap: .5rem;
+  }
+
+  main .container .contentUp h1 {
+    font-size: 2.3rem;
+    margin-top: 2rem;
+  }
+
+  main .container .contentUp h2 {
+    font-size: .95rem;
+    margin-top: .3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  main .container .contentUp .inputAndButton  {
+    width: 100%;
+    flex-direction: row;
+    gap: .5rem;
+  }
+
+  main .container .contentUp .inputAndButton .input {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main .container .contentUp .inputAndButton .input input {
+    width: 100%;
+    padding: .8rem 1.6rem;
+  }
+
+  main .container .contentUp .inputAndButton .input .infoError {
+    font-size: .75rem;
+    text-align: left;
+    padding-left: 1.2rem;
+  }
+
+  main .container .contentUp .inputAndButton button {
+    width:25%;
+    height: 2.563rem;
+    padding: .6rem ;
+    margin-top: 0;
+  }
+
+  main .container .contentFooter .socials a {
+    padding: .6rem;
+  }
+  
+  main .container .contentFooter .socials img {
+    width: 1.05rem;
+    height: 1.05rem;
+  }
+
+  footer {
+    font-size: .85rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  main .container {
+    width: 40rem;
+  }
+
+  main .container .contentUp {
+    padding: 3rem 0;
+  }
+
+  main .container .contentUp h1 {
+    font-size: 2.7rem;
+  }
+
+  main .container .contentUp h2 {
+    font-size: 1.1rem;
+  }
+
+  main .container .contentUp .inputAndButton .input input {
+    width: 100%;
+    padding: .8rem 1.6rem;
+  }
+
+  main .container .contentFooter .textFooter {
+    font-size: .8rem;
+  }
+
+  footer {
+    font-size: .85rem;
+  }
+}
